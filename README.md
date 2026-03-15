@@ -34,6 +34,20 @@ CLI-Anything: Bridging the Gap Between AI Agents and the World's Software</stron
 
 ---
 
+## 📰 News
+
+> Thanks to all invaluable efforts from the community! More updates continuously on the way everyday..
+
+| Date | Update |
+|------|--------|
+| **2026-03-15** | Merged Windows cygpath guard to ensure CLI-Anything works reliably in Windows bash environments without cygpath. Community contributions continue to strengthen cross-platform support. |
+| **2026-03-14** | Fixed a GIMP Script-Fu path injection vulnerability and added Japanese README translation. OpenCode version requirements documented alongside several Windows compatibility improvements. |
+| **2026-03-13** | Qodercli plugin officially merged as a community contribution with dedicated setup scripts. Codex skill gained a Windows install script, and placeholder URLs were cleaned up across the project. |
+| **2026-03-12** | Codex skill integration landed, bringing CLI-Anything to yet another AI coding platform. Qodercli support was also introduced, and documentation was updated with limitations and experimental labels. |
+| **2026-03-11** | Zoom video conferencing harness added as the 11th supported application. Multiple community fixes shipped for Shotcut auto-save, LibreOffice Windows/macOS backend, and OpenCode support. |
+
+---
+
 ## 🤔 Why CLI?
 
 CLI is the universal interface for both humans and AI agents:
@@ -81,7 +95,7 @@ CLI-Anything is distributed as a Claude Code plugin marketplace hosted on GitHub
 
 That's it. The plugin is now available in your Claude Code session.
 
-**Windows note:** Claude Code runs shell commands via `bash`. On Windows, install Git for Windows (includes `bash` and
+> **Note for Win Users:** Claude Code runs shell commands via `bash`. On Windows, install Git for Windows (includes `bash` and
 `cygpath`) or use WSL; otherwise commands may fail with `cygpath: command not found`.
 
 **Step 3: Build a CLI in One Command**
@@ -142,7 +156,7 @@ cp -r CLI-Anything/cli-anything-plugin ~/.claude/plugins/cli-anything
 
 **Step 1: Install the Commands**
 
-**Note:** Please upgrade to the latest OpenCode. Older versions may use a different commands path.
+> **Note:** Please upgrade to the latest OpenCode. Older versions may use a different commands path.
 
 Copy the CLI-Anything commands **and** `HARNESS.md` to your OpenCode commands directory:
 
