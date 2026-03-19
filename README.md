@@ -8,8 +8,8 @@ CLI-Anything: Bridging the Gap Between AI Agents and the World's Software</stron
 <p align="center">
   <a href="#-quick-start"><img src="https://img.shields.io/badge/Quick_Start-5_min-blue?style=for-the-badge" alt="Quick Start"></a>
   <a href="https://hkuds.github.io/CLI-Anything/hub/"><img src="https://img.shields.io/badge/CLI_Hub-Browse_%26_Install-ff69b4?style=for-the-badge" alt="CLI Hub"></a>
-  <a href="#-demonstrations"><img src="https://img.shields.io/badge/Demos-15_Apps-green?style=for-the-badge" alt="Demos"></a>
-  <a href="#-test-results"><img src="https://img.shields.io/badge/Tests-1%2C707_Passing-brightgreen?style=for-the-badge" alt="Tests"></a>
+  <a href="#-demonstrations"><img src="https://img.shields.io/badge/Demos-16_Apps-green?style=for-the-badge" alt="Demos"></a>
+  <a href="#-test-results"><img src="https://img.shields.io/badge/Tests-1%2C743_Passing-brightgreen?style=for-the-badge" alt="Tests"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"></a>
 </p>
 
@@ -401,7 +401,7 @@ AI agents are great at reasoning but terrible at using real professional softwar
 | 💸 "UI automation breaks constantly" | No screenshots, no clicking, no RPA fragility. Pure command-line reliability with structured interfaces |
 | 📊 "Agents need structured data" | Built-in JSON output for seamless agent consumption + human-readable formats for debugging |
 | 🔧 "Custom integrations are expensive" | One Claude plugin auto-generates CLIs for ANY codebase through proven 7-phase pipeline |
-| ⚡ "Prototype vs Production gap" | 1,707+ tests with real software validation. Battle-tested across 15 major applications |
+| ⚡ "Prototype vs Production gap" | 1,743+ tests with real software validation. Battle-tested across 16 major applications |
 
 ---
 
@@ -502,7 +502,7 @@ SKILL.md files are auto-generated during Phase 6.5 of the pipeline using `skill_
 CLI-Anything works on any software with a codebase — no domain restrictions or architectural limitations.
 
 ### 🏭 Professional-Grade Testing
-Tested across 15 diverse, complex applications spanning creative, productivity, communication, diagramming, AI image generation, AI content generation, and local LLM inference domains previously inaccessible to AI agents.
+Tested across 16 diverse, complex applications spanning creative, productivity, communication, diagramming, AI image generation, AI content generation, network ad blocking, and local LLM inference domains previously inaccessible to AI agents.
 
 ### 🎨 Diverse Domain Coverage
 From creative workflows (image editing, 3D modeling, vector graphics) to production tools (audio, office, live streaming, video editing).
@@ -624,6 +624,13 @@ Each application received complete, production-ready CLI interfaces — not demo
 <td align="center">✅ 70</td>
 </tr>
 <tr>
+<td align="center"><strong>🛡️ AdGuard Home</strong></td>
+<td>Network-wide Ad Blocking</td>
+<td><code>cli-anything-adguardhome</code></td>
+<td>AdGuard Home REST API</td>
+<td align="center">✅ 36</td>
+</tr>
+<tr>
 <td align="center"><strong>🦙 Ollama</strong></td>
 <td>Local LLM Inference</td>
 <td><code>cli-anything-ollama</code></td>
@@ -632,11 +639,11 @@ Each application received complete, production-ready CLI interfaces — not demo
 </tr>
 <tr>
 <td align="center" colspan="4"><strong>Total</strong></td>
-<td align="center"><strong>✅ 1,707</strong></td>
+<td align="center"><strong>✅ 1,743</strong></td>
 </tr>
 </table>
 
-> **100% pass rate** across all 1,707 tests — 1,246 unit tests + 461 end-to-end tests.
+> **100% pass rate** across all 1,743 tests — 1,270 unit tests + 473 end-to-end tests.
 
 ---
 
@@ -668,9 +675,10 @@ mermaid        10 passed  ✅   (5 unit + 5 e2e)
 anygen         50 passed  ✅   (40 unit + 10 e2e)
 notebooklm     21 passed  ✅   (21 unit + 0 e2e)
 comfyui        70 passed  ✅   (60 unit + 10 e2e)
+adguardhome    36 passed  ✅   (24 unit + 12 e2e)
 ollama         98 passed  ✅   (87 unit + 11 e2e)
 ──────────────────────────────────────────────────────────────────────────────
-TOTAL        1,707 passed  ✅   100% pass rate
+TOTAL        1,743 passed  ✅   100% pass rate
 ```
 
 ---
@@ -735,6 +743,7 @@ cli-anything/
 ├── 🖼️ comfyui/agent-harness/            # ComfyUI CLI (70 tests)
 ├── 🧠 notebooklm/agent-harness/         # NotebookLM CLI (experimental, 21 tests)
 ├── 🖼️ comfyui/agent-harness/            # ComfyUI CLI (70 tests)
+├── 🛡️ adguardhome/agent-harness/       # AdGuard Home CLI (36 tests)
 └── 🦙 ollama/agent-harness/             # Ollama CLI (98 tests)
 ```
 
@@ -836,7 +845,7 @@ HARNESS.md is our definitive SOP for making any software agent-accessible via au
 
 It encodes proven patterns and methodologies refined through automated generation processes.
 
-The playbook distills key insights from successfully building all 15 diverse, production-ready harnesses.
+The playbook distills key insights from successfully building all 16 diverse, production-ready harnesses.
 
 ### Critical Lessons
 
@@ -961,7 +970,7 @@ MIT License — free to use, modify, and distribute.
 
 **CLI-Anything** — *Make any software with a codebase Agent-native.*
 
-<sub>A methodology for the age of AI agents | 15 professional software demos | 1,707 passing tests</sub>
+<sub>A methodology for the age of AI agents | 16 professional software demos | 1,743 passing tests</sub>
 
 <br>
 
