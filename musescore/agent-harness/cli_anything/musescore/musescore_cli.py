@@ -187,6 +187,13 @@ def transpose_by_key(input_path, output_path, target_key, direction,
         transpose_key_signatures=not no_key_sig,
         transpose_chord_names=not no_chord_names,
     )
+
+    # Update session state from output file
+    if sess.has_project() and sess.project_path == input_path:
+        updated = proj_mod.open_project(output_path)
+        sess.project_data.update(updated)
+        sess.project_path = output_path
+
     output(result, f"Transposed to {target_key}")
 
 
@@ -216,6 +223,13 @@ def transpose_by_interval(input_path, output_path, semitones, interval_index,
         transpose_key_signatures=not no_key_sig,
         transpose_chord_names=not no_chord_names,
     )
+
+    # Update session state from output file
+    if sess.has_project() and sess.project_path == input_path:
+        updated = proj_mod.open_project(output_path)
+        sess.project_data.update(updated)
+        sess.project_path = output_path
+
     output(result, "Transposed by interval")
 
 
@@ -242,6 +256,13 @@ def transpose_diatonic(input_path, output_path, steps, direction,
         transpose_key_signatures=not no_key_sig,
         transpose_chord_names=not no_chord_names,
     )
+
+    # Update session state from output file
+    if sess.has_project() and sess.project_path == input_path:
+        updated = proj_mod.open_project(output_path)
+        sess.project_data.update(updated)
+        sess.project_path = output_path
+
     output(result, f"Diatonic transpose by {steps} steps")
 
 
@@ -376,6 +397,13 @@ def instruments_add(path, output_path, instrument_id, name):
     if sess.has_project():
         sess.snapshot(f"Add instrument: {name}")
     result = inst_mod.add_instrument(path, output_path, instrument_id, name)
+
+    # Update session state from output file
+    if sess.has_project() and sess.project_path == path:
+        updated = proj_mod.open_project(output_path)
+        sess.project_data.update(updated)
+        sess.project_path = output_path
+
     output(result, f"Added instrument: {name}")
 
 
@@ -390,6 +418,13 @@ def instruments_remove(path, output_path, name):
     if sess.has_project():
         sess.snapshot(f"Remove instrument: {name}")
     result = inst_mod.remove_instrument(path, output_path, name)
+
+    # Update session state from output file
+    if sess.has_project() and sess.project_path == path:
+        updated = proj_mod.open_project(output_path)
+        sess.project_data.update(updated)
+        sess.project_path = output_path
+
     output(result, f"Removed instrument: {name}")
 
 
@@ -405,6 +440,13 @@ def instruments_reorder(path, output_path, order):
     if sess.has_project():
         sess.snapshot("Reorder instruments")
     result = inst_mod.reorder_instruments(path, output_path, new_order)
+
+    # Update session state from output file
+    if sess.has_project() and sess.project_path == path:
+        updated = proj_mod.open_project(output_path)
+        sess.project_data.update(updated)
+        sess.project_path = output_path
+
     output(result, "Reordered instruments")
 
 
