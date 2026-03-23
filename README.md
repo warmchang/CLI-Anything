@@ -420,7 +420,7 @@ pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=gimp/agen
 
 The meta-skill auto-updates whenever `registry.json` changes — new community CLIs show up automatically.
 
-> **For Claude Code users:** You can also copy [`cli-hub-skill/SKILL.md`](cli-hub-skill/SKILL.md) into your project or skills directory so Claude can discover available CLIs on its own.
+> **For Claude Code users:** Copy [`cli-hub-meta-skill/SKILL.md`](cli-hub-meta-skill/SKILL.md) into your project or skills directory. This meta-skill points to the live catalog at `https://hkuds.github.io/CLI-Anything/SKILL.txt` for automatic CLI discovery.
 
 ---
 

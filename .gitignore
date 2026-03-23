@@ -30,6 +30,9 @@
 !/openclaw-skill/
 !/cli-hub-meta-skill/
 
+# Ignore cli-hub-skill (auto-generated, not tracked)
+/cli-hub-skill/
+
 # Step 4: Allow each software dir (top level only)
 !/gimp/
 !/blender/
