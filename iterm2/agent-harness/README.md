@@ -46,20 +46,14 @@ iTerm2 → Preferences → General → Magic → Enable Python API ✓
 
 ## Installation
 
-**Recommended** (isolated, globally accessible):
 ```bash
-uv tool install git+https://github.com/voidfreud/cli-anything-iterm2.git
-```
-
-Or with pip:
-```bash
-pip install git+https://github.com/voidfreud/cli-anything-iterm2.git
+pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=iterm2/agent-harness
 ```
 
 From source (for development):
 ```bash
-git clone https://github.com/voidfreud/cli-anything-iterm2.git
-cd cli-anything-iterm2
+git clone https://github.com/HKUDS/CLI-Anything.git
+cd CLI-Anything/iterm2/agent-harness
 pip install -e .
 ```
 
@@ -316,8 +310,8 @@ cli-anything-iterm2 session get-var user.project
 Unit tests run without iTerm2, E2E tests require a live instance.
 
 ```bash
-git clone https://github.com/voidfreud/cli-anything-iterm2.git
-cd cli-anything-iterm2
+git clone https://github.com/HKUDS/CLI-Anything.git
+cd CLI-Anything/iterm2/agent-harness
 pip install -e .
 
 # Unit tests (no iTerm2 needed)
