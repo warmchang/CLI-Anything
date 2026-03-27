@@ -183,7 +183,8 @@ This avoids the 1-3 second cold start overhead for each command.
 
 ### URL Restrictions
 The browser harness validates all URLs before navigation:
-- **Blocked schemes**: `file://`, `javascript:`, `data:`, `vbscript:`, `about:`, `chrome://`, and browser-internal schemes
+- **Explicit scheme required**: URLs must include `http://` or `https://` scheme (scheme-less URLs like `example.com` are rejected)
+- **Blocked schemes**: `file://`, `javascript://`, `data://`, `vbscript://`, `about://`, `chrome://`, and browser-internal schemes
 - **Allowed schemes**: `http://` and `https://` only (configurable via `CLI_ANYTHING_BROWSER_ALLOWED_SCHEMES`)
 - **Private network blocking**: Optional via `CLI_ANYTHING_BROWSER_BLOCK_PRIVATE=true` (disabled by default)
 
