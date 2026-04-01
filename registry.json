@@ -52,7 +52,7 @@
       "display_name": "Blender",
       "version": "1.0.0",
       "description": "3D modeling, animation, and rendering via blender --background --python",
-      "requires": "blender",
+      "requires": "blender >= 4.2",
       "homepage": "https://www.blender.org",
       "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=blender/agent-harness",
       "entry_point": "cli-anything-blender",
@@ -172,6 +172,20 @@
       "category": "office",
       "contributor": "CLI-Anything-Team",
       "contributor_url": "https://github.com/HKUDS/CLI-Anything"
+    },
+    {
+      "name": "zotero",
+      "display_name": "Zotero",
+      "version": "0.1.0",
+      "description": "Reference management via local Zotero SQLite, connector, and Local API",
+      "requires": "Zotero desktop app",
+      "homepage": "https://www.zotero.org",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=zotero/agent-harness",
+      "entry_point": "cli-anything-zotero",
+      "skill_md": "zotero/agent-harness/cli_anything/zotero/skills/SKILL.md",
+      "category": "office",
+      "contributor": "zhiwuyazhe_fjr",
+      "contributor_url": "https://github.com/zhiwuyazhe_fjr"
     },
     {
       "name": "mubu",
@@ -314,6 +328,20 @@
       "contributor_url": "https://github.com/zhangxilong-43"
     },
     {
+      "name": "freecad",
+      "display_name": "FreeCAD",
+      "version": "1.1.0",
+      "description": "Parametric 3D CAD modeling via FreeCAD CLI (258 commands: Part, Sketcher, PartDesign, Assembly, Mesh, TechDraw, Draft, FEM, CAM, and more)",
+      "requires": "FreeCAD >= 1.1 (freecad.org)",
+      "homepage": "https://www.freecad.org",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=freecad/agent-harness",
+      "entry_point": "cli-anything-freecad",
+      "skill_md": "freecad/agent-harness/cli_anything/freecad/skills/SKILL.md",
+      "category": "3d",
+      "contributor": "AlexGabbia",
+      "contributor_url": "https://github.com/AlexGabbia"
+    },
+    {
       "name": "iterm2",
       "display_name": "iTerm2",
       "version": "1.0.0",
@@ -340,6 +368,90 @@
       "category": "game",
       "contributor": "TianyuFan0504",
       "contributor_url": "https://github.com/TianyuFan0504"
+    },
+    {
+      "name": "rms",
+      "display_name": "Teltonika RMS",
+      "version": "1.0.0",
+      "description": "Device management and monitoring via Teltonika RMS REST API",
+      "requires": "RMS_API_TOKEN",
+      "homepage": "https://rms.teltonika-networks.com",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=rms/agent-harness",
+      "entry_point": "cli-anything-rms",
+      "skill_md": "rms/agent-harness/cli_anything/rms/skills/SKILL.md",
+      "category": "network",
+      "contributor": "galke",
+      "contributor_url": "https://github.com/galke7"
+    },
+    {
+      "name": "renderdoc",
+      "display_name": "RenderDoc",
+      "version": "0.1.0",
+      "description": "GPU frame capture analysis: pipeline state, shader export, texture inspection, draw call browsing",
+      "requires": "renderdoc (Python bindings from RenderDoc installation)",
+      "homepage": "https://renderdoc.org",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=renderdoc/agent-harness",
+      "entry_point": "cli-anything-renderdoc",
+      "skill_md": "renderdoc/agent-harness/cli_anything/renderdoc/skills/SKILL.md",
+      "category": "graphics",
+      "contributor": "levishilf",
+      "contributor_url": "https://github.com/levishilf"
+    },
+    {
+      "name": "videocaptioner",
+      "display_name": "VideoCaptioner",
+      "version": "1.0.0",
+      "description": "AI-powered video captioning — transcribe speech, optimize/translate subtitles, burn styled subtitles into video",
+      "requires": "videocaptioner (pip install videocaptioner), ffmpeg",
+      "homepage": "https://github.com/WEIFENG2333/VideoCaptioner",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=videocaptioner/agent-harness",
+      "entry_point": "cli-anything-videocaptioner",
+      "skill_md": "videocaptioner/agent-harness/cli_anything/videocaptioner/skills/SKILL.md",
+      "category": "video",
+      "contributor": "WEIFENG2333",
+      "contributor_url": "https://github.com/WEIFENG2333"
+    },
+    {
+      "name": "intelwatch",
+      "display_name": "Intelwatch",
+      "version": "1.0.0",
+      "description": "Competitive intelligence, M&A due diligence, and OSINT directly from your terminal.",
+      "requires": "Node.js >=18",
+      "homepage": "https://github.com/ashroth/intelwatch",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=intelwatch/agent-harness",
+      "entry_point": "cli-anything-intelwatch",
+      "skill_md": "intelwatch/agent-harness/cli_anything/intelwatch/skills/SKILL.md",
+      "category": "osint",
+      "contributor": "ashroth",
+      "contributor_url": "https://github.com/ashroth"
+    },
+    {
+      "name": "clibrowser",
+      "display_name": "clibrowser",
+      "version": "0.1.0",
+      "description": "Zero-dependency CLI browser for AI agents with search, extraction, forms, RSS, crawling, auth, and WebMCP support",
+      "requires": "Rust toolchain (cargo) for source install, or manual binary download from GitHub Releases",
+      "homepage": "https://github.com/allthingssecurity/clibrowser",
+      "install_cmd": "cargo install --git https://github.com/allthingssecurity/clibrowser.git --tag v0.1.0 --locked",
+      "entry_point": "clibrowser",
+      "skill_md": null,
+      "category": "web",
+      "contributor": "allthingssecurity",
+      "contributor_url": "https://github.com/allthingssecurity"
+    },
+    {
+      "name": "cloudcompare",
+      "display_name": "CloudCompare",
+      "version": "1.0.0",
+      "description": "3D point cloud and mesh processing: load/save, color ops, normal estimation, Delaunay meshing, noise filtering, ICP registration, connected component segmentation",
+      "requires": "cloudcompare (CloudCompare application installed, e.g. via Flatpak or package manager)",
+      "homepage": "https://cloudcompare.org",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=cloudcompare/agent-harness",
+      "entry_point": "cli-anything-cloudcompare",
+      "skill_md": "cloudcompare/agent-harness/cli_anything/cloudcompare/skills/SKILL.md",
+      "category": "graphics",
+      "contributor": "Taeyoung96",
+      "contributor_url": "https://github.com/Taeyoung96"
     }
   ]
 }
