@@ -58,6 +58,7 @@
 !/krita/
 !/freecad/
 !/iterm2/
+!/slay_the_spire_ii/
 !/rms/
 !/renderdoc/
 !/cloudcompare/
@@ -109,6 +110,8 @@
 /freecad/.*
 /iterm2/*
 /iterm2/.*
+/slay_the_spire_ii/*
+/slay_the_spire_ii/.*
 /rms/*
 /rms/.*
 /renderdoc/*
@@ -141,6 +144,8 @@
 !/krita/agent-harness/
 !/freecad/agent-harness/
 !/iterm2/agent-harness/
+!/slay_the_spire_ii/agent-harness/
+!/slay_the_spire_ii/README.md
 !/rms/agent-harness/
 !/renderdoc/agent-harness/
 !/cloudcompare/agent-harness/

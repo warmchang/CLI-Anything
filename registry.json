@@ -2,7 +2,7 @@
   "meta": {
     "repo": "https://github.com/HKUDS/CLI-Anything",
     "description": "CLI-Hub — Agent-native stateful CLI interfaces for softwares, codebases, and Web Services",
-    "updated": "2026-03-29"
+    "updated": "2026-03-26"
   },
   "clis": [
     {
@@ -354,6 +354,20 @@
       "category": "devops",
       "contributor": "voidfreud",
       "contributor_url": "https://github.com/voidfreud"
+    },
+    {
+      "name": "slay_the_spire_ii",
+      "display_name": "Slay the Spire II",
+      "version": "1.0.0",
+      "description": "Control the real Slay the Spire 2 game via local STS2_Bridge HTTP API",
+      "requires": "Slay the Spire 2 (Steam) with STS2_Bridge mod enabled",
+      "homepage": "https://github.com/HKUDS/CLI-Anything/tree/main/slay_the_spire_ii",
+      "install_cmd": "pip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=slay_the_spire_ii/agent-harness",
+      "entry_point": "cli-anything-sts2",
+      "skill_md": "slay_the_spire_ii/agent-harness/cli_anything/slay_the_spire_ii/skills/SKILL.md",
+      "category": "game",
+      "contributor": "TianyuFan0504",
+      "contributor_url": "https://github.com/TianyuFan0504"
     },
     {
       "name": "rms",
