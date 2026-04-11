@@ -1,5 +1,6 @@
 """Lightweight, opt-out-able download event tracking via Umami."""
 
+import atexit
 import os
 import platform
 import threading
@@ -12,6 +13,20 @@ UMAMI_URL = "https://cloud.umami.is/api/send"
 WEBSITE_ID = "a076c661-bed1-405c-a522-813794e688b4"
 HOSTNAME = "clianything.cc"
 USER_AGENT = f"Mozilla/5.0 (compatible; cli-anything-hub/{__version__})"
+
+_pending_threads = []
+_lock = threading.Lock()
+
+
+def _flush_pending():
+    """Wait for in-flight analytics requests before process exit."""
+    with _lock:
+        threads = list(_pending_threads)
+    for t in threads:
+        t.join(timeout=3)
+
+
+atexit.register(_flush_pending)
 
 
 def _is_enabled():
@@ -45,7 +60,10 @@ def track_event(event_name, url="/cli-anything-hub", data=None):
         },
     }
 
-    threading.Thread(target=_send_event, args=(payload,), daemon=True).start()
+    t = threading.Thread(target=_send_event, args=(payload,), daemon=True)
+    with _lock:
+        _pending_threads.append(t)
+    t.start()
 
 
 def track_install(cli_name, version):
