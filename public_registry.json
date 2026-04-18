@@ -2,7 +2,7 @@
   "meta": {
     "repo": "https://github.com/HKUDS/CLI-Anything",
     "description": "Public CLI Registry — Third-party and official CLIs managed by CLI-Hub across npm, bundled, brew, and other install methods",
-    "updated": "2026-04-16"
+    "updated": "2026-04-18"
   },
   "clis": [
     {
@@ -179,6 +179,31 @@
         {
           "name": "1Password",
           "url": "https://1password.com"
+        }
+      ]
+    },
+    {
+      "name": "android-cli",
+      "display_name": "Android CLI",
+      "version": "0.7",
+      "description": "Official Android terminal interface for SDK setup, project creation, emulator/device management, app run/deploy workflows, docs access, and skill management for any agent",
+      "category": "mobile",
+      "requires": "Preview release; Linux x86_64, macOS arm64, or Windows x86_64. Android SDK / JDK requirements depend on the workflow you run.",
+      "homepage": "https://developer.android.com/tools/agents/android-cli",
+      "docs_url": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
+      "source_url": null,
+      "package_manager": "bundled",
+      "install_strategy": "bundled",
+      "install_notes": "Install Android CLI from the official archive page: Linux `curl -fsSL https://dl.google.com/android/cli/latest/linux_x86_64/install.sh | bash`; macOS `curl -fsSL https://dl.google.com/android/cli/latest/darwin_arm64/install.sh | bash`; Windows `curl.exe -fsSL https://dl.google.com/android/cli/latest/windows_x86_64/install.cmd -o \"%TEMP%\\i.cmd\" && \"%TEMP%\\i.cmd\"`.",
+      "uninstall_notes": "Remove the Android CLI binary from your PATH or rerun the official installer cleanup flow for your platform.",
+      "update_notes": "Run `android update` to fetch the latest Android CLI capabilities, or reinstall from the official archive page if needed.",
+      "skill_md": "https://developer.android.com/tools/agents/android-skills",
+      "entry_point": "android",
+      "detect_cmd": "android",
+      "contributors": [
+        {
+          "name": "Android Developers",
+          "url": "https://developer.android.com"
         }
       ]
     },
